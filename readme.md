@@ -1,4 +1,4 @@
-# Submission or project name
+# AndroLearn - Learn Native Android Dev a easier way
 
 [![Contributors](https://img.shields.io/github/contributors/dsckgec/AndroLearn.svg)](https://github.com/dsckgec/AndroLearn/graphs/contributors) [![Forks](https://img.shields.io/github/forks/dsckgec/AndroLearn.svg)](https://github.com/dsckgec/AndroLearn/network/members) [![Issues](https://img.shields.io/github/issues/dsckgec/AndroLearn.svg)](https://github.com/dsckgec/AndroLearn/issues) [![Pull Request](https://img.shields.io/github/issues-pr-closed-raw/dsckgec/AndroLearn)](https://github.com/dsckgec/AndroLearn/pulls)
 
