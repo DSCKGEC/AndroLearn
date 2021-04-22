@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         categoryList.add(Category(R.drawable.background, "Legacy", "Legacy widgets..."))
         val RVadapter = CategoryAdapter(categoryList)
         Log.i("RVV", "${categoryList.size}")
-        categoryRV.setLayoutManager(LinearLayoutManager(this))
+        categoryRV.layoutManager = LinearLayoutManager(this)
         categoryRV.adapter = RVadapter
     }
 }

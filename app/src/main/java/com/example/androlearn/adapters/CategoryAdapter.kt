@@ -1,5 +1,6 @@
 package com.example.androlearn.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,11 +9,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androlearn.R
 import com.example.androlearn.models.Category
+import com.example.androlearn.screens.CategoryItems
 
 
 class CategoryAdapter(var categoryList:ArrayList<Category>): RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
+
        val background: ImageView = itemView.findViewById<ImageView>(R.id.backgroundImage)
         val subTitle : TextView=itemView.findViewById(R.id.subtitle)
         val title: TextView=itemView.findViewById(R.id.title)
@@ -28,10 +31,16 @@ class CategoryAdapter(var categoryList:ArrayList<Category>): RecyclerView.Adapte
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
         val categoryItem= categoryList[position]
         holder.background.setBackgroundResource(categoryItem.imageUrl)
         holder.subTitle.text=categoryItem.subtitle
         holder.title.text=categoryItem.title
+        holder.itemView.setOnClickListener{
+            val intent=Intent(holder.itemView.context,CategoryItems::class.java)
+            intent.putExtra("title","${categoryItem.title}")
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
