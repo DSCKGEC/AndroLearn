@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".screens.ComponentDetails">
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="5dp"
+        android:paddingVertical="20dp"
+        android:layout_width="match_parent">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:scaleType="fitCenter"
+                android:layout_margin="10dp"
+                android:src="@drawable/category_background"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="200dp"/>
+            <TextView
+
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="Old macdonald had a farm E I E I O . Amd on his farm he had some dogs E I E I O"
+                android:layout_width="0dp"
+                android:layout_height="200dp"/>
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:drawableLeft="@drawable/ic_baseline_view_headline_24"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+            android:text=" Necessary Attributes" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/necessaryRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" />
+
+            <TextView
+                android:drawableLeft="@drawable/ic_baseline_view_headline_24"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text=" Other Attributes" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:paddingVertical="10dp"
+                android:id="@+id/optionalRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
