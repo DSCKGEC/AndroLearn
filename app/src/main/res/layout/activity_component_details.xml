@@ -9,10 +9,11 @@
     <androidx.cardview.widget.CardView
 
         app:cardCornerRadius="20dp"
-        android:layout_height="wrap_content"
+
         android:layout_margin="10dp"
         android:elevation="5dp"
         android:paddingVertical="20dp"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent">
         <LinearLayout
 
@@ -54,7 +55,7 @@
 
             <TextView
                 android:drawableLeft="@drawable/ic_baseline_view_headline_24"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,6 +63,7 @@
             android:text=" Necessary Attributes" />
 
             <androidx.recyclerview.widget.RecyclerView
+
                 android:id="@+id/necessaryRV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -69,7 +71,7 @@
 
             <TextView
                 android:drawableLeft="@drawable/ic_baseline_view_headline_24"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
 
                 android:layout_width="match_parent"
@@ -78,11 +80,11 @@
                 android:text=" Other Attributes" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:paddingVertical="10dp"
+
                 android:id="@+id/optionalRV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp" />
+                android:layout_marginVertical="10dp" />
 
 
         </LinearLayout>
