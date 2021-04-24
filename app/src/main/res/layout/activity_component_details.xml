@@ -31,7 +31,7 @@
                 android:layout_margin="10dp"
                 android:gravity="center"
                 android:layout_weight="1"
-                android:text="Old macdonald had a farm E I E I O . Amd on his farm he had some dogs E I E I O"
+                android:text="Some details on how the component will work and where you can use it"
                 android:layout_width="0dp"
                 android:layout_height="200dp"/>
 
