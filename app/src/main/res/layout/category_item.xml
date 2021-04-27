@@ -48,8 +48,6 @@
                 android:layout_alignRight="@+id/backgroundImage"
                 android:layout_alignTop="@+id/backgroundImage"
                 android:layout_alignBottom="@+id/backgroundImage"
-
-
                 android:textColor="#fff"
                 android:text="SubTitle of the category"
                 android:layout_width="match_parent"
