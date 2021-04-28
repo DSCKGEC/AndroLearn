@@ -1,3 +1,5 @@
 package com.example.androlearn.models
 
-class Component (var name: String)
+//class Component (
+//    var name: String = "",
+//)

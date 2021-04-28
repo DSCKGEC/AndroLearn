@@ -1,7 +1,9 @@
 package com.example.androlearn.models
 
 class Category (
-    var imageUrl : Int,
-    var title : String,
-    var subtitle : String,
+    var complist: ArrayList<String> = ArrayList(),
+    var imageUrl : String = "",
+    var subtitle : String = "",
+    var title : String = "",
+
 )

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "168970191995",
+    "project_id": "androlearnstore",
+    "storage_bucket": "androlearnstore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168970191995:android:134e4e55164fbadf498ede",
+        "android_client_info": {
+          "package_name": "com.example.androlearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168970191995-6gt7bc7omcgajrsuhi70en0ecsqp1vol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIXIBGCpeNH7RgAkwP5J4LhfK0GRTd_WI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168970191995-6gt7bc7omcgajrsuhi70en0ecsqp1vol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
