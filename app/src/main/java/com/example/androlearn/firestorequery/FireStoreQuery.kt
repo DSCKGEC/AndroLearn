@@ -13,6 +13,7 @@ class FireStoreQuery {
     }
 
     fun getComponents(compName : String): Task<QuerySnapshot> {
+
         return firebaseFireStore.collection("Components").whereEqualTo("comp_name", compName).get()
     }
 

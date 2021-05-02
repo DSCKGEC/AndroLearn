@@ -58,6 +58,7 @@ class ComponentDetails : AppCompatActivity() {
     }
 
     private fun loadComponentDetail(compTitle : String) {
+
         fireStoreQuery.getComponents(compTitle)
             .addOnSuccessListener { results ->
 

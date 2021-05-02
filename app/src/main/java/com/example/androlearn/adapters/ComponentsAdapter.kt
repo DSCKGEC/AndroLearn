@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androlearn.R
 //import com.example.androlearn.models.Component
@@ -32,8 +33,12 @@ class ComponentsAdapter(var componentList: ArrayList<String>) :
         holder.title.text = item
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, ComponentDetails::class.java)
-            intent.putExtra("compTitle", holder.title.text)
-            holder.itemView.context.startActivity(intent)
+            if(holder.title.text != null){
+                intent.putExtra("compTitle", holder.title.text)
+                holder.itemView.context.startActivity(intent)
+            }else{
+                Toast.makeText(holder.itemView.context, "Component info isn't added yet!!!", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
