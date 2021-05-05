@@ -62,7 +62,7 @@ class ComponentDetails : AppCompatActivity() {
         fireStoreQuery.getComponents(compTitle)
             .addOnSuccessListener { results ->
 
-                if (!results.isEmpty){
+                if (!results.isEmpty) {
 
                     for (result in results) {
                         componentDetailList.add(result.toObject(ComponentDetail::class.java))
@@ -70,11 +70,13 @@ class ComponentDetails : AppCompatActivity() {
                     componentDesc.text = componentDetailList[0].comp_desc
 
                     for (nessAttDetail in componentDetailList[0].comp_ness_att) {
-                        necessaryAttributeDetailsList.add(AttributeDetail(nessAttDetail["att_desc"], nessAttDetail["att_name"]))
+//                        necessaryAttributeDetailsList.add(AttributeDetail(nessAttDetail["att_desc"], nessAttDetail["att_name"]))
+                        necessaryAttributeDetailsList.add(AttributeDetail(nessAttDetail.values.toString(), nessAttDetail.keys.toString()))
                     }
 
                     for(othAttDetail in componentDetailList[0].comp_oth_att) {
-                        optionalAttributeDetailsList.add(AttributeDetail(othAttDetail["att_desc"], othAttDetail["att_name"]))
+//                        optionalAttributeDetailsList.add(AttributeDetail(othAttDetail["att_desc"], othAttDetail["att_name"]))
+                        optionalAttributeDetailsList.add(AttributeDetail(othAttDetail.values.toString(), othAttDetail.keys.toString()))
                     }
 
                     nessAttAdapter.attributeDetailsList = necessaryAttributeDetailsList
@@ -83,7 +85,7 @@ class ComponentDetails : AppCompatActivity() {
                     nessAttAdapter.notifyDataSetChanged()
                     othAttAdapter.notifyDataSetChanged()
 
-                }else{
+                } else {
                     Toast.makeText(this, "No Such data Exist!!!", Toast.LENGTH_SHORT).show()
                 }
 
