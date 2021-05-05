@@ -1,57 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_margin="10dp"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_margin="10dp">
+
     <androidx.cardview.widget.CardView
-        android:padding="10dp"
-
-
-        app:cardCornerRadius="15dp"
-        android:elevation="5dp"
-
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:scaleType="centerCrop"
-                android:src="@drawable/background"
-                android:id="@+id/backgroundImage"
-                android:layout_width="match_parent"
-                android:layout_height="180dp"/>
+            android:layout_height="wrap_content"
+            android:background="#2C2C2C">
+
+            <FrameLayout
+                android:id="@+id/backgroundImageLayout"
+                android:layout_width="160dp"
+                android:layout_height="180dp"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/backgroundImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/background" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/category_image_layout"/>
+
+            </FrameLayout>
+
+            <!--            android:layout_alignLeft="@+id/backgroundImage"-->
+<!--            android:layout_alignTop="@+id/backgroundImage"-->
+<!--            android:layout_alignRight="@+id/backgroundImage"-->
+<!--            android:layout_alignBottom="@+id/backgroundImage"-->
+
             <TextView
                 android:id="@+id/title"
-                android:textSize="24sp"
-                android:gravity="start"
-               android:layout_marginTop="20dp"
-                android:layout_marginLeft="16dp"
-                android:layout_alignLeft="@+id/backgroundImage"
-                android:layout_alignRight="@+id/backgroundImage"
-                android:layout_alignTop="@+id/backgroundImage"
-                android:layout_alignBottom="@+id/backgroundImage"
                 style="@style/TextAppearance.AppCompat.Title"
-                android:textStyle="bold"
-                android:textColor="#fff"
-                android:text="Title of the category"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:gravity="start"
+                android:text="Title of the category"
+                android:layout_toStartOf="@id/backgroundImageLayout"
+                android:textColor="#fff"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/title"-->
+<!--                android:textSize="24sp"-->
+<!--                android:gravity="start"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_alignLeft="@+id/backgroundImage"-->
+<!--                android:layout_alignRight="@+id/backgroundImage"-->
+<!--                android:layout_alignTop="@+id/backgroundImage"-->
+<!--                android:layout_alignBottom="@+id/backgroundImage"-->
+<!--                style="@style/TextAppearance.AppCompat.Title"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="#fff"-->
+<!--                android:text="Title of the category"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+
             <TextView
                 android:id="@+id/subtitle"
-                android:textSize="14sp"
-                android:gravity="start"
-                android:layout_marginTop="60dp"
-                android:layout_marginLeft="16dp"
-                android:layout_alignLeft="@+id/backgroundImage"
-                android:layout_alignRight="@+id/backgroundImage"
-                android:layout_alignTop="@+id/backgroundImage"
-                android:layout_alignBottom="@+id/backgroundImage"
-                android:textColor="#fff"
-                android:text="SubTitle of the category"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                android:layout_toStartOf="@id/backgroundImageLayout"
+                android:layout_below="@id/title"
+                android:text="SubTitle of the category"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/subtitle"-->
+<!--                android:textSize="14sp"-->
+<!--                android:gravity="start"-->
+<!--                android:layout_marginTop="60dp"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_alignLeft="@+id/backgroundImage"-->
+<!--                android:layout_alignRight="@+id/backgroundImage"-->
+<!--                android:layout_alignTop="@+id/backgroundImage"-->
+<!--                android:layout_alignBottom="@+id/backgroundImage"-->
+<!--                android:textColor="#fff"-->
+<!--                android:text="SubTitle of the category"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--            android:layout_alignLeft="@+id/backgroundImage"-->
+<!--            android:layout_alignTop="@+id/backgroundImage"-->
+<!--            android:layout_alignRight="@+id/backgroundImage"-->
+<!--            android:layout_alignBottom="@+id/backgroundImage"-->
+
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
