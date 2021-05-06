@@ -7,6 +7,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.androlearn.R
 import com.example.androlearn.adapters.CategoryAdapter
 import com.example.androlearn.adapters.ComponentDetailsAdapter
@@ -68,15 +70,22 @@ class ComponentDetails : AppCompatActivity() {
                         componentDetailList.add(result.toObject(ComponentDetail::class.java))
                     }
                     componentDesc.text = componentDetailList[0].comp_desc
+                    Glide.with(this)
+                        .load(componentDetailList[0].comp_image)
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
+                        .placeholder(R.drawable.category_background)
+                        .error(R.drawable.background)
+                        .timeout(60000)
+                        .into(componentImg)
 
                     for (nessAttDetail in componentDetailList[0].comp_ness_att) {
 //                        necessaryAttributeDetailsList.add(AttributeDetail(nessAttDetail["att_desc"], nessAttDetail["att_name"]))
-                        necessaryAttributeDetailsList.add(AttributeDetail(nessAttDetail.values.toString(), nessAttDetail.keys.toString()))
+                        necessaryAttributeDetailsList.add(AttributeDetail(nessAttDetail.values.toString().substring(1, nessAttDetail.values.toString().length - 1), nessAttDetail.keys.toString().substring(1, nessAttDetail.keys.toString().length - 1)))
                     }
 
                     for(othAttDetail in componentDetailList[0].comp_oth_att) {
 //                        optionalAttributeDetailsList.add(AttributeDetail(othAttDetail["att_desc"], othAttDetail["att_name"]))
-                        optionalAttributeDetailsList.add(AttributeDetail(othAttDetail.values.toString(), othAttDetail.keys.toString()))
+                        optionalAttributeDetailsList.add(AttributeDetail(othAttDetail.values.toString().substring(1, othAttDetail.values.toString().length - 1), othAttDetail.keys.toString().substring(1, othAttDetail.keys.toString().length - 1)))
                     }
 
                     nessAttAdapter.attributeDetailsList = necessaryAttributeDetailsList
