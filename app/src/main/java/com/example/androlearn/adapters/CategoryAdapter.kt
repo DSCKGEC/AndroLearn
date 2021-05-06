@@ -1,6 +1,7 @@
 package com.example.androlearn.adapters
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,10 +9,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
 import com.example.androlearn.R
 import com.example.androlearn.models.Category
 //import com.example.androlearn.models.Component
 import com.example.androlearn.screens.CategoryItems
+
 
 class CategoryAdapter(var categoryList: List<Category>) :
     RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
@@ -34,6 +42,14 @@ class CategoryAdapter(var categoryList: List<Category>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val categoryItem = categoryList[position]
+        //Toast.makeText(holder.itemView.context, categoryItem.imageUrl, Toast.LENGTH_LONG).show()
+        Glide.with(holder.itemView.context)
+            .load(categoryItem.imageUrl)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .placeholder(R.drawable.background)
+            .error(R.drawable.background)
+            .timeout(60000)
+            .into(holder.background)
 //        holder.background.setBackgroundResource(categoryItem.imageUrl)
         holder.subTitle.text = categoryItem.subtitle
         holder.title.text = categoryItem.title
