@@ -1,7 +1,9 @@
 package com.example.androlearn.adapters
 
+import android.app.Activity
 import android.content.Intent
 import android.graphics.drawable.Drawable
+import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +26,8 @@ import com.example.androlearn.screens.CategoryItems
 class CategoryAdapter(var categoryList: List<Category>) :
     RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
+
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val background: ImageView = itemView.findViewById<ImageView>(R.id.backgroundImage)
@@ -40,6 +44,12 @@ class CategoryAdapter(var categoryList: List<Category>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+//        val displayMetrics : DisplayMetrics = DisplayMetrics()
+//        (holder.itemView.context as Activity).windowManager.defaultDisplay.getRealMetrics(displayMetrics)
+//        val width: Int = displayMetrics.widthPixels;
+
+        //Toast.makeText(holder.itemView.context, ""+width, Toast.LENGTH_LONG).show()
 
         val categoryItem = categoryList[position]
         //Toast.makeText(holder.itemView.context, categoryItem.imageUrl, Toast.LENGTH_LONG).show()

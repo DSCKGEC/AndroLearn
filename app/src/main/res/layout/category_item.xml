@@ -14,14 +14,14 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="180dp"
             android:background="#2C2C2C">
 
-            <FrameLayout
-                android:id="@+id/backgroundImageLayout"
-                android:layout_width="160dp"
-                android:layout_height="180dp"
-                android:layout_alignParentRight="true">
+<!--            <FrameLayout-->
+<!--                android:id="@+id/backgroundImageLayout"-->
+<!--                android:layout_width="160dp"-->
+<!--                android:layout_height="180dp"-->
+<!--                android:layout_alignParentRight="true">-->
 
                 <ImageView
                     android:id="@+id/backgroundImage"
@@ -30,76 +30,76 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/background" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/category_image_layout"/>
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/category_image_layout"/>-->
 
-            </FrameLayout>
+<!--            </FrameLayout>-->
 
             <!--            android:layout_alignLeft="@+id/backgroundImage"-->
 <!--            android:layout_alignTop="@+id/backgroundImage"-->
 <!--            android:layout_alignRight="@+id/backgroundImage"-->
 <!--            android:layout_alignBottom="@+id/backgroundImage"-->
 
-            <TextView
-                android:id="@+id/title"
-                style="@style/TextAppearance.AppCompat.Title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="20dp"
-                android:gravity="start"
-                android:text="Title of the category"
-                android:layout_toStartOf="@id/backgroundImageLayout"
-                android:textColor="#fff"
-                android:textSize="23sp"
-                android:textStyle="bold" />
-
 <!--            <TextView-->
 <!--                android:id="@+id/title"-->
-<!--                android:textSize="24sp"-->
-<!--                android:gravity="start"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:layout_marginLeft="16dp"-->
-<!--                android:layout_alignLeft="@+id/backgroundImage"-->
-<!--                android:layout_alignRight="@+id/backgroundImage"-->
-<!--                android:layout_alignTop="@+id/backgroundImage"-->
-<!--                android:layout_alignBottom="@+id/backgroundImage"-->
 <!--                style="@style/TextAppearance.AppCompat.Title"-->
-<!--                android:textStyle="bold"-->
-<!--                android:textColor="#fff"-->
-<!--                android:text="Title of the category"-->
 <!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"/>-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:gravity="start"-->
+<!--                android:text="Title of the category"-->
+<!--                android:layout_toStartOf="@id/backgroundImageLayout"-->
+<!--                android:textColor="#fff"-->
+<!--                android:textSize="23sp"-->
+<!--                android:textStyle="bold" />-->
 
             <TextView
-                android:id="@+id/subtitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:id="@+id/title"
+                android:textSize="24sp"
                 android:gravity="start"
-                android:layout_marginTop="10dp"
-                android:layout_toStartOf="@id/backgroundImageLayout"
-                android:layout_below="@id/title"
-                android:text="SubTitle of the category"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_alignLeft="@+id/backgroundImage"
+                android:layout_alignRight="@+id/backgroundImage"
+                android:layout_alignTop="@+id/backgroundImage"
+                android:layout_alignBottom="@+id/backgroundImage"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
                 android:textColor="#fff"
-                android:textSize="14sp" />
+                android:text="Title of the category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
 <!--            <TextView-->
 <!--                android:id="@+id/subtitle"-->
-<!--                android:textSize="14sp"-->
-<!--                android:gravity="start"-->
-<!--                android:layout_marginTop="60dp"-->
-<!--                android:layout_marginLeft="16dp"-->
-<!--                android:layout_alignLeft="@+id/backgroundImage"-->
-<!--                android:layout_alignRight="@+id/backgroundImage"-->
-<!--                android:layout_alignTop="@+id/backgroundImage"-->
-<!--                android:layout_alignBottom="@+id/backgroundImage"-->
-<!--                android:textColor="#fff"-->
-<!--                android:text="SubTitle of the category"-->
 <!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"/>-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:gravity="start"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_toStartOf="@id/backgroundImageLayout"-->
+<!--                android:layout_below="@id/title"-->
+<!--                android:text="SubTitle of the category"-->
+<!--                android:textColor="#fff"-->
+<!--                android:textSize="14sp" />-->
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:textSize="14sp"
+                android:gravity="start"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_alignLeft="@+id/backgroundImage"
+                android:layout_alignRight="@+id/backgroundImage"
+                android:layout_alignTop="@+id/backgroundImage"
+                android:layout_alignBottom="@+id/backgroundImage"
+                android:textColor="#fff"
+                android:text="SubTitle of the category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
 <!--            android:layout_alignLeft="@+id/backgroundImage"-->
 <!--            android:layout_alignTop="@+id/backgroundImage"-->
