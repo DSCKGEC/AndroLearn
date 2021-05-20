@@ -26,15 +26,22 @@
                 android:src="@drawable/category_background"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="200dp"/>
-            <TextView
-                android:id="@+id/componentDesc"
-                android:layout_margin="10dp"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:text="Some details on how the component will work and where you can use it"
+                android:layout_height="match_parent"/>
+            <ScrollView
                 android:layout_width="0dp"
-                android:layout_height="200dp"/>
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:scrollbars="none"
+                android:layout_height="200dp">
+
+                <TextView
+                    android:id="@+id/componentDesc"
+                    android:gravity="center"
+                    android:text="Some details on how the component will work and where you can use it"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </ScrollView>
 
         </LinearLayout>
 
@@ -71,6 +78,7 @@
                 android:layout_marginVertical="10dp" />
 
             <TextView
+                android:id="@+id/oth_att_textView"
                 android:drawableLeft="@drawable/ic_baseline_view_headline_24"
                 android:textSize="20sp"
                 android:textStyle="bold"

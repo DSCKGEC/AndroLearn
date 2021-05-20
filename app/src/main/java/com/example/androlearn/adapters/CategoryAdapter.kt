@@ -71,6 +71,7 @@ class CategoryAdapter(var categoryList: List<Category>) :
             val intent = Intent(holder.itemView.context, CategoryItems::class.java)
             if(holder.compList.size > 0){
                 intent.putExtra("compList", holder.compList)
+                intent.putExtra("categoryTitle", holder.title.text.toString())
                 holder.itemView.context.startActivity(intent)
             }else{
                 Toast.makeText(holder.itemView.context, "Component List isn't added yet!!!",Toast.LENGTH_SHORT).show()

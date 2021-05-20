@@ -2,6 +2,8 @@ package com.example.androlearn.screens
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -18,6 +20,7 @@ import com.example.androlearn.models.ComponentDetail
 
 class ComponentDetails : AppCompatActivity() {
 
+    private lateinit var oth_att_textView: TextView
     private lateinit var necessaryRV: RecyclerView
     private lateinit var optionalRV: RecyclerView
     private lateinit var componentDesc: TextView
@@ -37,8 +40,13 @@ class ComponentDetails : AppCompatActivity() {
         optionalRV = findViewById(R.id.optionalRV)
         componentImg = findViewById(R.id.componentImg)
         componentDesc = findViewById(R.id.componentDesc)
+        oth_att_textView = findViewById(R.id.oth_att_textView)
 
         val compTitle : String? = intent.getStringExtra("compTitle")
+
+        val actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+        actionBar?.title = compTitle
 
         componentDetailList = ArrayList()
         necessaryAttributeDetailsList = ArrayList()
@@ -88,6 +96,11 @@ class ComponentDetails : AppCompatActivity() {
                         optionalAttributeDetailsList.add(AttributeDetail(othAttDetail.values.toString().substring(1, othAttDetail.values.toString().length - 1), othAttDetail.keys.toString().substring(1, othAttDetail.keys.toString().length - 1)))
                     }
 
+                    // to remove optional attribute tittle when not needed
+                    if (componentDetailList[0].comp_oth_att.size == 0) {
+                        oth_att_textView.visibility = View.GONE
+                    }
+
                     nessAttAdapter.attributeDetailsList = necessaryAttributeDetailsList
                     othAttAdapter.attributeDetailsList = optionalAttributeDetailsList
 
@@ -102,5 +115,16 @@ class ComponentDetails : AppCompatActivity() {
             .addOnCanceledListener {
                 Toast.makeText(this, "Something went wrong!!!", Toast.LENGTH_SHORT).show()
             }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

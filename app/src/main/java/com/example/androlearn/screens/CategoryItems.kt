@@ -2,6 +2,7 @@ package com.example.androlearn.screens
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,7 +20,12 @@ class CategoryItems : AppCompatActivity() {
 
         setContentView(R.layout.activity_category_items)
 
-        Toast.makeText(this, ""+ compList[0], Toast.LENGTH_SHORT).show()
+        val categoryTitle: String? = intent.getStringExtra("categoryTitle")
+        val actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+        actionBar?.title = categoryTitle
+
+        Toast.makeText(this, ""+ categoryTitle, Toast.LENGTH_SHORT).show()
 //        Toast.makeText(this, ""+ compList[1], Toast.LENGTH_SHORT).show()
 
         categoryItemsRV=findViewById(R.id.categoryItemsRV)
@@ -33,5 +39,16 @@ class CategoryItems : AppCompatActivity() {
         categoryItemsRV.layoutManager = LinearLayoutManager(this)
         categoryItemsRV.adapter =componentItemsAdapter
 
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
