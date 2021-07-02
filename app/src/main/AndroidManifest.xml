@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androlearn">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,15 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroLearn">
-        <activity android:name=".screens.ComponentDetails"></activity>
-        <activity android:name=".screens.CategoryItems" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".screens.SplashScreenActivity" android:theme="@style/splash_screen_style">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".screens.ComponentDetails" />
+        <activity android:name=".screens.CategoryItems" />
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
