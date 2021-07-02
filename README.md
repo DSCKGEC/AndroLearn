@@ -24,10 +24,16 @@ A basic GitHub repository template for initializing open source projects on a si
 We all know how Native Android Development is not very friendly for a beginner to learn . So to combat this problem (and as native android developers) we built AndroLearn. AndroLearn aims to be a handbook for beginners to get started with android dev enthusiasts. The app has the list of all inbuilt components as well an exhaustive lists of Third party libraries , their attributes (necessary and optional) and much more !
 
 ### How can this project help?
+The project contains 50+ Android Components and 3rd party libraries with their necessary and optional parameters.
 
 ### The idea
 
+
 ## Project structure
+
+* XML and Kotlin for the Frontend
+* Admin Webapp built with Flutter
+* Firebase as a backend
 
 ```
 
