@@ -6,16 +6,25 @@ A basic GitHub repository template for initializing open source projects on a si
 
 ## Contents
 
-1. [Description](#description)
-1. [Project structure](#project-structure)
-1. [Project roadmap](#project-roadmap)
-1. [Getting started](#getting-started)
-1. [Live demo](#live-demo)
-1. [Built with](#built-with)
-1. [Contributing](#contributing)
-1. [Authors](#authors)
-1. [License](#license)
-1. [Acknowledgments](#acknowledgments)
+- [AndroLearn - Learn Native Android Dev a easier way](#androlearn---learn-native-android-dev-a-easier-way)
+  - [Contents](#contents)
+  - [Description](#description)
+    - [What's the problem?](#whats-the-problem)
+    - [How can this project help?](#how-can-this-project-help)
+  - [Screenshots](#screenshots)
+  - [Project structure](#project-structure)
+  - [Project roadmap](#project-roadmap)
+  - [Getting started](#getting-started)
+    - [Prerequisites](#prerequisites)
+      - [Softwares needed](#softwares-needed)
+      - [Knowledge needed](#knowledge-needed)
+    - [Installing](#installing)
+  - [Live demo](#live-demo)
+  - [Built with](#built-with)
+  - [Contributing](#contributing)
+  - [Authors](#authors)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
 
 ## Description
 
@@ -26,7 +35,11 @@ We all know how Native Android Development is not very friendly for a beginner t
 ### How can this project help?
 The project contains 50+ Android Components and 3rd party libraries with their necessary and optional parameters.
 
-### The idea
+## Screenshots
+<img src="https://user-images.githubusercontent.com/55250734/124342114-2df2aa00-dbdf-11eb-9ec8-e88111305620.png"  width="150" height="300">
+
+<img src="https://user-images.githubusercontent.com/55250734/124342072-bde42400-dbde-11eb-8222-407a058ad617.png" width="150" height="300">
+
 
 
 ## Project structure
